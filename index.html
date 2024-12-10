@@ -41,6 +41,12 @@
             margin-top: 20px;
             display: none;
         }
+        img {
+            max-width: 80%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -53,11 +59,15 @@
         function showMessage(answer) {
             const messageDiv = document.getElementById('message');
             if (answer === 'yes') {
-                messageDiv.textContent = 'Mati Sigma wchuuuuuuj!';
-                messageDiv.style.color = '#28a745';
+                messageDiv.innerHTML = `
+                    <p>Mati Sigma wchuuuuuuj!</p>
+                    <img src="https://i.imgur.com/K4Fez4W.jpeg" alt="Mati Sigma">
+                `;
             } else {
-                messageDiv.textContent = 'Mati not Sigma.';
-                messageDiv.style.color = '#dc3545';
+                messageDiv.innerHTML = `
+                    <p>Mati not Sigma.</p>
+                    <img src="https://i.imgur.com/K4Fez4W.jpeg" alt="Mati not Sigma">
+                `;
             }
             messageDiv.style.display = 'block';
         }
