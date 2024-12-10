@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czy Mati jest Sigma?</title>
+    <style>
+        body {
+            font-family: Calibri, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .yes-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .no-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        .message {
+            font-size: 2em;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Czy Mati jest Sigma?</h1>
+    <button class="yes-btn" onclick="showMessage('yes')">Tak</button>
+    <button class="no-btn" onclick="showMessage('no')">Nie</button>
+    <div id="message" class="message"></div>
+
+    <script>
+        function showMessage(answer) {
+            const messageDiv = document.getElementById('message');
+            if (answer === 'yes') {
+                messageDiv.textContent = 'Mati Sigma wchuuuuuuj!';
+                messageDiv.style.color = '#28a745';
+            } else {
+                messageDiv.textContent = 'Mati not Sigma.';
+                messageDiv.style.color = '#dc3545';
+            }
+            messageDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
